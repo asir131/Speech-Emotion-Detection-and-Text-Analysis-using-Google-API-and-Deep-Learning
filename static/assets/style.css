@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background-image: url('image/background-image.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.upload-section {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 30px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* .upload-section:hover {
+    transform: translateY(-5px);
+ 
+} */
+
+.upload-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.upload-section label {
+    display: block;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.upload input[type="text"],
+.upload-section input[type=file] {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+
+input.form-control-file {
+    padding: 10px;
+}
+
+.upload-section button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.upload-section button:hover {
+    background-color: #3e8e41;
+}
+
+.hover-2 {
+    --c: #1095c1;
+    /* the color */
+    --b: .1em;
+    /* border length*/
+    --d: 20px;
+    /* the cube depth */
+
+    --_s: calc(var(--d) + var(--b));
+
+    color: var(--c);
+    border: solid #0000;
+    border-width: var(--b) var(--b) var(--_s) var(--_s);
+    background:
+        conic-gradient(at left var(--d) bottom var(--d),
+            #fff 90deg, rgb(255 255 255 /0.3) 0 225deg, rgb(255 255 255 /0.6) 0) border-box,
+        conic-gradient(at left var(--_s) bottom var(--_s),
+            #fff 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+    transform: translate(calc(var(--d)/-1), var(--d));
+    clip-path:
+        polygon(var(--d) 0%,
+            var(--d) 0%,
+            100% 0%,
+            100% calc(100% - var(--d)),
+            100% calc(100% - var(--d)),
+            var(--d) calc(100% - var(--d)));
+    transition: 0.5s;
+}
+
+.hover-2:hover {
+    transform: translate(0, 0);
+    clip-path:
+        polygon(0% var(--d),
+            var(--d) 0%,
+            100% 0%,
+            100% calc(100% - var(--d)),
+            calc(100% - var(--d)) 100%,
+            0% 100%);
+}
+
+textarea {
+    /*resize: none;*/
+    overflow: hidden;
+    min-height: 50px;
+    max-height: 500px;
+}
+
+
+.card @media screen and (max-width: 767px) {
+    .background-image {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .upload-section {
+        margin: 20px 0;
+    }
+}
+

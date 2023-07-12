@@ -1,0 +1,3 @@
+pip install ffmpeg-downloader
+ffdl install --add-path
+python manage.py collectstatic
